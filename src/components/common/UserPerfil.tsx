@@ -11,9 +11,9 @@ export const UserPerfil = ({
     <>
       {nickname || profilePicture ? (
         <Link href={urlGithub}>
-          <div className='w-full flex flex-col gap-3 rounded-full text-center'>
+          <div className='w-full flex flex-col gap-3 text-center'>
             <Image
-              className='w-11 h-11 m-auto rounded-full bg-white'
+              className='w-11 h-11 m-auto rounded-xl bg-white'
               title={nickname}
               src={profilePicture ? profilePicture : ''}
               width={40}

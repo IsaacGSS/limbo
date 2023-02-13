@@ -38,11 +38,13 @@ export const HeaderNav = () => {
           </div>
         </div>
 
-        <div id='perfilHeader' className='flex flex-col items-center gap-12'>
+        <div id='perfilHeader' className='flex flex-col items-center gap-8'>
           <div className='flex flex-col items-center gap-6'>
             <BellIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
             <Cog6ToothIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
           </div>
+
+          <hr className='w-1/2 h-1' />
 
           <UserPerfil
             profilePicture={user.profilePicture}
