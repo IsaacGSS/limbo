@@ -30,7 +30,7 @@ export const HeaderNav = () => {
     <>
       <header
         id='navManuHeader'
-        className='flex flex-col absolute left-0 bg-stone-900 w-16 h-screen text-white text-center items-center justify-between py-5'
+        className='flex flex-col absolute  bg-stone-900  h-screen text-white text-center items-center justify-between py-5'
       >
         <div id='mainHeader' className='flex flex-col gap-12'>
           <p id='iconL' className='font-roboto text-6xl text-indigo-500'>
