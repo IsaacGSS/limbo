@@ -4,7 +4,7 @@ import { HeaderNav } from '../components/HeaderNav'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className='static'>
+    <div className='static font-roboto'>
       <HeaderNav />
       <Component {...pageProps} />
     </div>

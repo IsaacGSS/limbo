@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Amita', ...defaultTheme.fontFamily.sans]
+        Amita: ['Amita', ...defaultTheme.fontFamily.sans],
+        roboto: ['roboto', ...defaultTheme.fontFamily.sans]
       }
     }
   },

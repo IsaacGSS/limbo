@@ -10,7 +10,7 @@ export const Seo = ({ title, description, favicon }: iSeo) => {
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link
         rel='shortcut icon'
-        href={favicon ? favicon : 'letter-l.svg'}
+        href={favicon ? favicon : 'letter-l.png'}
         type='image/x-icon'
       />
     </Head>

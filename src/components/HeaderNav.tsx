@@ -1,4 +1,5 @@
-import Users from '../../json/usuarios.json'
+import { User } from '../api/Users'
+import { useEffect, useState } from 'react'
 import { UserPerfil } from '../components/common/UserPerfil'
 import {
   ChatBubbleOvalLeftEllipsisIcon,
@@ -11,29 +12,21 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const HeaderNav = () => {
-  // userPosition:
-  // 0 = isaac
-  // 1 = Guilherme
-  // 2 = Matheus
+  // Esta sendo usado o type Any para evitar descrever todo o tipo descrevendo toda Arary
+  const [user, setUser] = useState<any>({})
 
-  const userPosition = 1
-
-  const User = {
-    name: Users.user[userPosition].name,
-    surname: Users.user[userPosition].surname,
-    nickname: Users.user[userPosition].nickname,
-    urlGithub: Users.user[userPosition].urlGithub,
-    profilePicture: `${Users.user[userPosition].urlGithub}.png`
-  }
+  useEffect(() => {
+    setUser(User)
+  }, [])
 
   return (
     <>
       <header
         id='navManuHeader'
-        className='flex flex-col absolute  bg-stone-900  h-screen text-white text-center items-center justify-between py-5'
+        className='w-16 flex flex-col absolute  bg-stone-900  h-screen text-white text-center items-center justify-between py-5'
       >
         <div id='mainHeader' className='flex flex-col gap-12'>
-          <p id='iconL' className='font-roboto text-6xl text-indigo-500'>
+          <p id='iconL' className='font-Amita text-6xl text-indigo-500'>
             L
           </p>
           <div id='menuHeader' className='flex flex-col items-center  gap-6'>
@@ -52,8 +45,9 @@ export const HeaderNav = () => {
           </div>
 
           <UserPerfil
-            profilePicture={User.profilePicture}
-            nickname={User.nickname}
+            profilePicture={user.profilePicture}
+            nickname={user.nickname}
+            urlGithub={user.urlGithub}
           />
         </div>
       </header>

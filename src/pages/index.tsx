@@ -2,9 +2,11 @@ import { Seo } from '@/components/common/Seo'
 
 export default function Home() {
   return (
-    <div className='relative pl-16'>
+    <>
       <Seo title='hello' />
-      <h1 className='relative'>Home ssssssssssssssssssss</h1>
-    </div>
+      <div className='h-screen pl-16 flex justify-center items-center bg-stone-800'>
+        <h1 className='text-5xl text-white'>Home</h1>
+      </div>
+    </>
   )
 }

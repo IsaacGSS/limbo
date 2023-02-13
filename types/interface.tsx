@@ -4,6 +4,7 @@ export interface iSeo {
   favicon?: string | undefined | null
 }
 export interface iUsuarioPerfil {
-  nickname?: string
-  profilePicture?: string
+  nickname: string
+  profilePicture: string
+  urlGithub?: any
 }
