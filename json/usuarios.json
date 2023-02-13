@@ -1,0 +1,22 @@
+{
+  "user":[
+    {
+      "name": "Isaac Gabriel",
+      "surname" : "Sousa Silva",
+      "nickname": "I5aac.exe",
+      "urlGithub": "https://github.com/IsaacGSS"
+    },
+    {
+      "name": "Guilherme",
+      "surname" : "Huerta",
+      "nickname": "Gui_HR7",
+      "urlGithub": "https://github.com/Gui-HR"
+    },
+    {
+      "name": "Matheus",
+      "surname" : "Mena",
+      "nickname": "MatheusMena",
+      "urlGithub": "https://github.com/MatheusMena"
+    }
+  ]
+}

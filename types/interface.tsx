@@ -3,3 +3,7 @@ export interface iSeo {
   description?: string
   favicon?: string | undefined | null
 }
+export interface iUsuarioPerfil {
+  nickname?: string
+  profilePicture?: string
+}
