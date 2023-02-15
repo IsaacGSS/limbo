@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { HeaderNav } from '../components/HeaderNav'
+import { HeaderNav } from '../components/HeaderNav/HeaderNav'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

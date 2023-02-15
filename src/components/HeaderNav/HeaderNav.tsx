@@ -1,15 +1,16 @@
-import { User } from '../api/Users'
+import { User } from '../../api/Users'
 import { useEffect, useState } from 'react'
-import { UserPerfil } from '../components/common/UserPerfil'
+import { UserPerfil } from '../common/UserPerfil'
+
 import {
-  ChatBubbleOvalLeftEllipsisIcon,
-  UsersIcon,
-  Squares2X2Icon,
-  CalendarDaysIcon,
-  VideoCameraIcon,
-  Cog6ToothIcon,
-  BellIcon
-} from '@heroicons/react/24/outline'
+  ChatinboxIcon,
+  HomeIcon,
+  VideoChatIcon,
+  PerfiIcon,
+  HabitosIcon,
+  NotificationIcon,
+  ConfigurationIcon
+} from './NavIcon'
 
 export const HeaderNav = () => {
   // Esta sendo usado o type Any para evitar descrever todo o tipo descrevendo toda Arary
@@ -30,21 +31,21 @@ export const HeaderNav = () => {
             L
           </p>
           <div id='menuHeader' className='flex flex-col items-center  gap-6'>
-            <Squares2X2Icon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
-            <VideoCameraIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
-            <ChatBubbleOvalLeftEllipsisIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
-            <UsersIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
-            <CalendarDaysIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
+            <HomeIcon />
+            <VideoChatIcon />
+            <ChatinboxIcon />
+            <PerfiIcon />
+            <HabitosIcon />
           </div>
         </div>
 
         <div id='perfilHeader' className='flex flex-col items-center gap-8'>
           <div className='flex flex-col items-center gap-6'>
-            <BellIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
-            <Cog6ToothIcon className='w-16 h-6 hover:text-indigo-600 hover:border-l-2 border-indigo-600' />
+            <NotificationIcon />
+            <ConfigurationIcon />
           </div>
 
-          <hr className='w-1/2 h-1' />
+          <hr className='w-8 h-1' />
 
           <UserPerfil
             profilePicture={user.profilePicture}
@@ -56,4 +57,3 @@ export const HeaderNav = () => {
     </>
   )
 }
-// rectangle-group
