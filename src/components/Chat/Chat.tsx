@@ -7,11 +7,23 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const Chat = () => {
+  const dateToday = new Date()
+  toString()
+  let setHr = dateToday.getHours().toString()
+  let setMin = dateToday.getMinutes().toString()
+
+  let hr = setHr.length == 1 ? '0' + setHr : setHr
+  let min = setMin.length == 1 ? '0' + setMin : setMin
+
   const [mensagem, setMensagem] = useState<any>()
   const [chatMensagem, setChatMensagem] = useState<any>([])
+  const [time, setTime] = useState<any>([])
+
+  let valor = 0
 
   useEffect(() => {
     setChatMensagem(chatMensagem)
+    setTime(time)
   }, [chatMensagem])
 
   return (
@@ -20,7 +32,7 @@ export const Chat = () => {
         <div className='h-full w-full flex flex-col items-end'>
           {chatMensagem &&
             chatMensagem.map((e: any, key: any) => (
-              <Mensseng key={key} mensagem={e} />
+              <Mensseng key={key} mensagem={e} time={time} i={valor++} />
             ))}
         </div>
 
@@ -36,7 +48,6 @@ export const Chat = () => {
               autoCorrect='on'
               onChange={(e: any) => {
                 setMensagem(e.target.value)
-                console.log('upa')
               }}
             />
             <div className='flex flex-row justify-center items-center'>
@@ -54,6 +65,7 @@ export const Chat = () => {
                 className='rounded-full bg-indigo-700'
                 onClick={() => {
                   mensagem === '' ? '' : chatMensagem.push(mensagem)
+                  time.push({ hr, min })
                   setMensagem('')
                 }}
               >
