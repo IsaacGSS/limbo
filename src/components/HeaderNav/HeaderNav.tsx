@@ -16,7 +16,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 export const HeaderNav = () => {
   // Esta sendo usado o type Any para evitar descrever todo o tipo descrevendo toda Arary
   const [user, setUser] = useState<any>({})
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(true)
   const onclick = () => setIsActive(!isActive)
 
   useEffect(() => {
