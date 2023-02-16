@@ -28,7 +28,7 @@ export const Chat = () => {
 
   return (
     <>
-      <section className='h-screen w-full flex flex-col '>
+      <section className='min-h-screen w-full flex flex-col '>
         <div className='h-full w-full flex flex-col items-end'>
           {chatMensagem &&
             chatMensagem.map((e: any, key: any) => (
@@ -36,7 +36,7 @@ export const Chat = () => {
             ))}
         </div>
 
-        <div className='w-full flex justify-center'>
+        <div className='bottom-0 w-full flex justify-center'>
           <div className='flex flex-row justify-between items-center  w-11/12 min-h-14 m-4 p-2 bg-stone-800 rounded-lg shadow-lg shadow-neutral-700'>
             <input
               className='outline-none w-10/12 min-h-14 mx-2 bg-transparent placeholder:italic text-stone-50 '

@@ -6,7 +6,7 @@ export default function ChatinInbox() {
     <>
       <Seo title='chat' />
 
-      <main className='h-screen pl-16 flex justify-center bg-stone-500'>
+      <main className='h-full md:pl-16 flex justify-center bg-stone-500'>
         <Chat />
       </main>
     </>
