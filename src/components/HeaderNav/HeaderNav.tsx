@@ -18,10 +18,17 @@ export const HeaderNav = () => {
   const [user, setUser] = useState<any>({})
   const [isActive, setIsActive] = useState(true)
   const onclick = () => setIsActive(!isActive)
+  const [boolean, setBoolean] = useState(true)
 
   useEffect(() => {
     setUser(User)
   }, [])
+
+  useEffect(() => {
+    // setBoolean(!setBoolean)
+    setBoolean(false)
+    console.log(boolean)
+  }, [boolean])
 
   return (
     <header

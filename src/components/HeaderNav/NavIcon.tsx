@@ -8,15 +8,12 @@ import {
   VideoCameraIcon,
   Cog6ToothIcon,
   BellIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/20/solid'
 
 export const HomeIcon = () => {
   return (
     <Link href='/'>
-      <Squares2X2Icon
-        // fill=''
-        className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600 '
-      />
+      <Squares2X2Icon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -24,7 +21,7 @@ export const HomeIcon = () => {
 export const VideoChatIcon = () => {
   return (
     <Link href='/'>
-      <VideoCameraIcon className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <VideoCameraIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -32,7 +29,7 @@ export const VideoChatIcon = () => {
 export const ChatinboxIcon = () => {
   return (
     <Link href='/app/chatinInbox'>
-      <ChatBubbleOvalLeftEllipsisIcon className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <ChatBubbleOvalLeftEllipsisIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -40,7 +37,7 @@ export const ChatinboxIcon = () => {
 export const PerfiIcon = () => {
   return (
     <Link href='/'>
-      <UsersIcon className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <UsersIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -48,7 +45,7 @@ export const PerfiIcon = () => {
 export const HabitosIcon = () => {
   return (
     <Link href='/'>
-      <CalendarDaysIcon className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <CalendarDaysIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -56,7 +53,7 @@ export const HabitosIcon = () => {
 export const NotificationIcon = () => {
   return (
     <Link href='/'>
-      <BellIcon className='w-16 h-6 md:hover:fill-none hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <BellIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
@@ -64,7 +61,7 @@ export const NotificationIcon = () => {
 export const ConfigurationIcon = () => {
   return (
     <Link href='/'>
-      <Cog6ToothIcon className='w-16 h-6 md:hover:fill-none  hover:fill-indigo-600 hover:mr-1 hover:text-indigo-600 hover:border-l-4 border-indigo-600' />
+      <Cog6ToothIcon className='w-16 h-6 border-indigo-600 text-stone-200   hover:text-stone-400 hover:p-0.5 aria-selected:border-l-4 aria-selected:text-indigo-600 aria-selected:mr-1' />
     </Link>
   )
 }
