@@ -2,3 +2,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+  margin-bottom: 5rem;
+}
+
+/* 
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+  padding: 2px;
+  margin-bottom: 5rem;
+} */
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+li + li {
+  border-top: 1.5px solid #44403cd0;
+}
+
+#inputMensage {
+  height: auto;
+}

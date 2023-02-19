@@ -1,4 +1,4 @@
-import { User } from '../../api/Users'
+import { User, userPosition } from '../../api/Users'
 import { useEffect, useState } from 'react'
 import { UserPerfil } from '../common/UserPerfil'
 

@@ -21,12 +21,11 @@ export const UserPerfil = ({
               unoptimized
               alt='foto de perfil'
             />
-            <p className='w-16 text-xs text-center break-words'>{nickname}</p>
           </div>
         </Link>
       ) : (
         <div>
-          <div className='w-10 h-10 flex gap-1 rounded-full bg-white m-auto'></div>
+          <div className='w-11 h-11 flex flex-col text-center invisible md:visible mb-2 rounded-xl bg-white m-auto'></div>
           <p className='w-16 text-xs text-center break-words'>bem vindo</p>
         </div>
       )}
