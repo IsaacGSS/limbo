@@ -36,7 +36,7 @@ export const Chat = () => {
 
   return (
     <>
-      <section className='relative h-screen w-full rounded-lg flex flex-col justify-between'>
+      <section className='relative h-screen w-full flex flex-col justify-between bg-stone-500'>
         <div
           ref={messagesContainerRef}
           className='flex flex-col items-end overflow-y-auto pb-20'

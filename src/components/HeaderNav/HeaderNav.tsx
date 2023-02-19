@@ -18,23 +18,16 @@ export const HeaderNav = () => {
   const [user, setUser] = useState<any>({})
   const [isActive, setIsActive] = useState(true)
   const onclick = () => setIsActive(!isActive)
-  const [boolean, setBoolean] = useState(true)
 
   useEffect(() => {
     setUser(User)
   }, [])
 
-  useEffect(() => {
-    // setBoolean(!setBoolean)
-    setBoolean(false)
-    console.log(boolean)
-  }, [boolean])
-
   return (
     <header
       aria-hidden={isActive}
       id='navManuHeader'
-      className='max-md:aria-hidden:-left-16 max-md:aria-hidden:bg-transparent left-0 transition-all overflow-hidden w-16 flex fixed flex-col md:bg-stone-900 bg-transparent h-screen md:text-white text-slate-900 text-center items-center justify-between py-5
+      className='max-md:aria-hidden:-left-16 fixed z-10 max-md:aria-hidden:bg-transparent left-0 transition-all overflow-hidden w-16 flex  flex-col md:bg-stone-900 bg-transparent h-screen md:text-white text-slate-900 text-center items-center justify-between py-5
   '
     >
       <div onClick={onclick} id='mainHeader' className='flex flex-col gap-6'>
