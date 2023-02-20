@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Mensseng } from './mensseng'
+import parse from 'html-react-parser'
 import {
   MicrophoneIcon,
   PhotoIcon,
@@ -41,10 +42,10 @@ export const Chat = () => {
     }
   }
   const functionForShipping = () => {
-    mensagem == !mensagem ? mensagem : chatMensagem.push(mensagem),
+    mensagem == !mensagem ? '' : chatMensagem.push(mensagem),
       time.push({ hr, min })
 
-    setMensagem('')
+    setMensagem([])
   }
 
   return (
@@ -72,7 +73,7 @@ export const Chat = () => {
             autoCorrect='on'
             onKeyDown={sendByEnter}
             onChange={e => {
-              setMensagem(e.target.value)
+              setMensagem(e.target.value.trim())
             }}
           ></textarea>
           {/* <input
