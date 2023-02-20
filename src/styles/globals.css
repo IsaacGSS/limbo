@@ -34,6 +34,10 @@ li + li {
   border-top: 1.5px solid #44403cd0;
 }
 
-#inputMensage {
+textarea {
   height: auto;
+  resize: none;
+  height: 100%;
+  min-height: auto; /* ou qualquer outro valor desejado */
+  resize: none;
 }

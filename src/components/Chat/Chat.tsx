@@ -36,7 +36,16 @@ export const Chat = () => {
     }
   }, [mensagem])
 
-  console.log(chatMensagem)
+  const sendByEnter = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === 'Enter') {
+      functionForShipping()
+    }
+  }
+  const functionForShipping = () => {
+    mensagem === '' ? '' : chatMensagem.push(mensagem)
+    mensagem === '' ? '' : time.push({ hr, min })
+    setMensagem('')
+  }
 
   return (
     <section className='relative h-screen w-screen flex flex-col justify-between bg-stone-500'>
@@ -51,9 +60,9 @@ export const Chat = () => {
       </div>
 
       <div className='bottom-0 absolute right-0 w-full flex justify-center overflow-y-auto scroll-smooth'>
-        <div className='flex flex-row justify-between items-center  w-11/12 min-h-14 m-4 p-2 bg-stone-800 rounded-lg shadow-lg shadow-neutral-700'>
+        <div className='flex flex-row justify-between items-center  w-11/12 h-16 m-4 p-2 bg-stone-800 rounded-lg shadow-lg shadow-neutral-700'>
           <textarea
-            className='resize-none outline-none w-10/12 h-auto mx-2 bg-transparent placeholder:italic text-stone-50 auto-rows-auto'
+            className='resize-none h-auto outline-none w-10/12  mx-2 bg-transparent placeholder:italic text-stone-50'
             name=''
             id='inputMensage'
             rows={1}
@@ -61,6 +70,7 @@ export const Chat = () => {
             value={mensagem}
             autoComplete='on'
             autoCorrect='on'
+            onKeyDown={sendByEnter}
             onChange={e => {
               setMensagem(e.target.value)
             }}
@@ -86,9 +96,7 @@ export const Chat = () => {
             <button
               className='rounded-full bg-indigo-700'
               onClick={() => {
-                mensagem === '' ? '' : chatMensagem.push(mensagem)
-                time.push({ hr, min })
-                setMensagem('')
+                functionForShipping()
               }}
             >
               <PaperAirplaneIcon className='text-white w-6 -rotate-45 m-1.5' />
