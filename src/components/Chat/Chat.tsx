@@ -5,7 +5,6 @@ import {
   PhotoIcon,
   PaperAirplaneIcon
 } from '@heroicons/react/24/outline'
-import { ChatBubbleOvalLeftIcon } from '@heroicons/react/24/outline'
 
 export const Chat = () => {
   const dateToday = new Date()
@@ -42,16 +41,17 @@ export const Chat = () => {
     }
   }
   const functionForShipping = () => {
-    mensagem === '' ? '' : chatMensagem.push(mensagem)
-    mensagem === '' ? '' : time.push({ hr, min })
+    mensagem == !mensagem ? mensagem : chatMensagem.push(mensagem),
+      time.push({ hr, min })
+
     setMensagem('')
   }
 
   return (
-    <section className='relative h-screen w-screen flex flex-col justify-between bg-stone-500'>
+    <section className='relative h-screen w-screen flex flex-col md:justify-end justify-between bg-stone-500'>
       <div
         ref={messagesContainerRef}
-        className='flex flex-col items-end overflow-y-auto pb-20'
+        className='flex flex-col items-end  overflow-y-auto pt-3 pb-20'
       >
         {chatMensagem.length > 0 &&
           chatMensagem.map((e: any, key: any) => (
