@@ -31,13 +31,5 @@
 }
 
 li + li {
-  border-top: 1.5px solid #44403cd0;
-}
-
-textarea {
-  height: auto;
-  resize: none;
-  height: 100%;
-  min-height: auto; /* ou qualquer outro valor desejado */
-  resize: none;
+  border-top: 1.5px solid rgb(87 83 78);
 }

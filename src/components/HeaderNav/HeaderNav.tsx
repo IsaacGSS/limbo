@@ -27,7 +27,7 @@ export const HeaderNav = () => {
     <header
       aria-hidden={isActive}
       id='navManuHeader'
-      className='max-md:aria-hidden:-left-16 fixed z-10 max-md:aria-hidden:bg-transparent left-0 transition-all overflow-hidden w-16 flex  flex-col md:bg-stone-900 bg-transparent h-screen md:text-white text-slate-900 text-center items-center justify-between py-5
+      className='max-md:aria-hidden:-left-16 fixed z-10 max-md:aria-hidden:bg-transparent left-0 transition-all overflow-hidden w-16 flex  flex-col md:bg-stone-900 bg-transparent h-screen md:text-white text-center items-center justify-between py-5
   '
     >
       <div onClick={onclick} id='mainHeader' className='flex flex-col gap-6'>

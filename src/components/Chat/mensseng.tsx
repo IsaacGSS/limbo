@@ -1,4 +1,4 @@
-export const Mensseng = ({ mensagem, time, i }: any) => {
+export const Mensseng = ({ mensagem, time, i, code }: any) => {
   return (
     <>
       {mensagem && (
@@ -7,7 +7,7 @@ export const Mensseng = ({ mensagem, time, i }: any) => {
             <span>you</span>
           </div> */}
           <div className='max-w-md text-sm p-2 rounded-tl-xl rounded-bl-xl rounded-br-xl flex flex-col break-all items-end bg-emerald-500 whitespace-pre-wrap '>
-            <p>{mensagem}</p>
+            {code === 'code' ? <code>{mensagem}</code> : <p>{mensagem}</p>}
           </div>
           <div className='flex gap-0.5 md:text-xs text-[10px] font-light text-stone-700 mt-0.5 -mr-0.5'>
             <span>{time[i].hr}</span>

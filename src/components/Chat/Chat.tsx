@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { Mensseng } from './mensseng'
-import parse from 'html-react-parser'
 import {
   MicrophoneIcon,
+  PaperAirplaneIcon,
+  PaperClipIcon,
   PhotoIcon,
-  PaperAirplaneIcon
+  DocumentIcon,
+  CodeBracketIcon
 } from '@heroicons/react/24/outline'
 
 export const Chat = () => {
@@ -36,14 +38,24 @@ export const Chat = () => {
     }
   }, [mensagem])
 
+  const [isSelected, setisSelected] = useState(false)
+  const opcoesEnvioMensages = () => setisSelected(!isSelected)
+
+  const [isCodeMessages, setisCodeMessages] = useState<any>([])
+  const menssagesCode = () => {
+    isCodeMessages.push('code')
+    console.log(isCodeMessages)
+  }
+
   const sendByEnter = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Enter') {
       functionForShipping()
     }
   }
   const functionForShipping = () => {
-    mensagem == !mensagem ? '' : chatMensagem.push(mensagem),
+    mensagem == !mensagem ? '' : chatMensagem.push(mensagem.trim()),
       time.push({ hr, min })
+    setisCodeMessages([])
 
     setMensagem([])
   }
@@ -52,11 +64,17 @@ export const Chat = () => {
     <section className='relative h-screen w-screen flex flex-col md:justify-end justify-between bg-stone-500'>
       <div
         ref={messagesContainerRef}
-        className='flex flex-col items-end  overflow-y-auto pt-3 pb-20'
+        className='flex flex-col items-end overflow-y-auto pt-3 pb-20'
       >
         {chatMensagem.length > 0 &&
           chatMensagem.map((e: any, key: any) => (
-            <Mensseng key={key} mensagem={e} time={time} i={valor++} />
+            <Mensseng
+              key={key}
+              mensagem={e}
+              time={time}
+              i={valor++}
+              code={isCodeMessages}
+            />
           ))}
       </div>
 
@@ -69,28 +87,43 @@ export const Chat = () => {
             rows={1}
             placeholder='menssage...'
             value={mensagem}
-            autoComplete='on'
+            spellCheck='true'
             autoCorrect='on'
             onKeyDown={sendByEnter}
             onChange={e => {
-              setMensagem(e.target.value.trim())
+              setMensagem(e.target.value)
             }}
           ></textarea>
-          {/* <input
-            className='outline-none w-10/12 min-h-14 mx-2 bg-transparent placeholder:italic text-stone-50 '
-            placeholder='menssage...'
-            type='text'
-            value={mensagem}
-            id=''
-          /> */}
-          <div className='flex flex-row justify-center items-center '>
-            <button>
-              <MicrophoneIcon className='text-stone-400 hover:text-stone-100 w-5' />
-            </button>
 
-            <button>
-              <PhotoIcon className='text-stone-400 hover:text-stone-100 w-5' />
-            </button>
+          <div className='flex flex-row justify-center items-center'>
+            <span className='flex flex-row items-center justify-center'>
+              <div
+                aria-selected={isSelected}
+                className='text-white fixed z-50 bottom-[68px] right-[136px] aria-selected:flex aria-selected:opacity-100 aria-selected:delay-[150ms] opacity-0  transition-all'
+              >
+                <div className='flex p-4 bg-blue-700 border border-blue-800 rounded-l-3xl rounded-tr-3xl'>
+                  <PhotoIcon className='w-9 rounded-full p-2' />
+                  <DocumentIcon className='w-9 rounded-full p-2' />
+                  <CodeBracketIcon
+                    onClick={menssagesCode}
+                    className='w-9 rounded-full p-2'
+                  />
+                </div>
+              </div>
+              <div className='flex flex-row gap-1'>
+                <span
+                  onClick={opcoesEnvioMensages}
+                  aria-selected={isSelected}
+                  className='aria-selected:bg-blue-700 bg-transparent rounded-full'
+                >
+                  <PaperClipIcon className='text-stone-300 hover:text-white w-5 m-1' />
+                </span>
+
+                <span className='rounded-full active:bg-pink-500 active:text-black'>
+                  <MicrophoneIcon className='text-stone-300 hover:text-white w-5 m-1' />
+                </span>
+              </div>
+            </span>
 
             <hr className='w-px h-5 border-none bg-stone-500 rotate-180 mx-2' />
 
